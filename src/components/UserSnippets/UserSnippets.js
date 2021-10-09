@@ -4,6 +4,7 @@ import { auth, db } from "../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 import Card from "../Card/Card";
+import { Link } from "react-router-dom";
 
 function UserSnippets() {
   const [user, loading, error] = useAuthState(auth);
@@ -36,6 +37,25 @@ function UserSnippets() {
   return (
     <>
       <section className="text-gray-400 bg-gray-900 body-font">
+        <Link to="/new">
+          <button className="flex mr-10 ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 mr-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 4v16m8-8H4"
+              />
+            </svg>
+            New Snippet
+          </button>
+        </Link>
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -mx-4 -my-8">
             {data.map((item) => (
