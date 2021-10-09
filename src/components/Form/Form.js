@@ -26,6 +26,7 @@ function Form() {
           email: auth.currentUser.email,
           photoURL: auth.currentUser.photoURL,
         },
+        userID: auth.currentUser.uid,
         createdOn: new Date().toDateString(),
         desc: desc,
       });
@@ -47,7 +48,10 @@ function Form() {
               Snippet Details
             </h2>
             <div className="relative mb-4">
-              <label htmlFor="email" className="leading-7 text-sm text-gray-400">
+              <label
+                htmlFor="email"
+                className="leading-7 text-sm text-gray-400"
+              >
                 Title
               </label>
               <input
@@ -59,7 +63,10 @@ function Form() {
               />
             </div>
             <div className="relative mb-4">
-              <label htmlFor="email" className="leading-7 text-sm text-gray-400">
+              <label
+                htmlFor="email"
+                className="leading-7 text-sm text-gray-400"
+              >
                 Description
               </label>
               <input
@@ -82,7 +89,10 @@ function Form() {
               ></textarea>
             </div>
             <div className="relative mb-4">
-              <label htmlFor="email" className="leading-7 text-sm text-gray-400">
+              <label
+                htmlFor="email"
+                className="leading-7 text-sm text-gray-400"
+              >
                 Tags
               </label>
               <input
@@ -94,7 +104,10 @@ function Form() {
               />
             </div>
             <div className="relative mb-4">
-              <label htmlFor="email" className="leading-7 text-sm text-gray-400">
+              <label
+                htmlFor="email"
+                className="leading-7 text-sm text-gray-400"
+              >
                 Language
               </label>
               <input

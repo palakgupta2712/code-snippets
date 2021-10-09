@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import NewSnippets from "./pages/NewSnippets";
 import Snippet from "./components/Snippet/Snippet";
+import UserSnippets from "./components/UserSnippets/UserSnippets";
 
 function Routes() {
   const [user] = useAuthState(auth);
@@ -27,6 +28,9 @@ function Routes() {
             </Route>
             <Route path="/snippet/:id">
               <Snippet />
+            </Route>
+            <Route path="/snippets">
+              <UserSnippets />
             </Route>
           </Layout>
         </Switch>
