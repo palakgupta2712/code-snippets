@@ -21,9 +21,9 @@ function Cards() {
   }
   return (
     <>
-      <section class="text-gray-400 bg-gray-900 body-font">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-wrap -mx-4 -my-8">
+      <section className="text-gray-400 bg-gray-900 body-font">
+        <div className="container px-5 py-24 mx-auto">
+          <div className="flex flex-wrap -mx-4 -my-8">
             {data.map((item) => (
               <>
                 <Card item={item.data()} key={item.id} id={item.id} />

@@ -40,14 +40,14 @@ function Form() {
 
   return (
     <div>
-      <section class="text-gray-400 bg-gray-900 body-font relative">
-        <div class="container px-5 py-24 mx-auto flex">
-          <div class="max-w-md mx-auto bg-gray-900 shadow-md rounded-lg flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10">
-            <h2 class="text-white text-lg mb-1 font-medium title-font">
+      <section className="text-gray-400 bg-gray-900 body-font relative">
+        <div className="container px-5 py-24 mx-auto flex">
+          <div className="max-w-md mx-auto bg-gray-900 shadow-md rounded-lg flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10">
+            <h2 className="text-white text-lg mb-1 font-medium title-font">
               Snippet Details
             </h2>
-            <div class="relative mb-4">
-              <label htmlFor="email" class="leading-7 text-sm text-gray-400">
+            <div className="relative mb-4">
+              <label htmlFor="email" className="leading-7 text-sm text-gray-400">
                 Title
               </label>
               <input
@@ -55,11 +55,11 @@ function Form() {
                 id="title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
-            <div class="relative mb-4">
-              <label htmlFor="email" class="leading-7 text-sm text-gray-400">
+            <div className="relative mb-4">
+              <label htmlFor="email" className="leading-7 text-sm text-gray-400">
                 Description
               </label>
               <input
@@ -67,22 +67,22 @@ function Form() {
                 id="desc"
                 value={desc}
                 onChange={(e) => setDesc(e.target.value)}
-                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
-            <div class="relative mb-4">
-              <label for="message" class="leading-7 text-sm text-gray-400">
+            <div className="relative mb-4">
+              <label for="message" className="leading-7 text-sm text-gray-400">
                 Code
               </label>
               <textarea
                 id="code"
                 value={code}
                 onChange={(e) => setCode(e.target.value)}
-                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               ></textarea>
             </div>
-            <div class="relative mb-4">
-              <label htmlFor="email" class="leading-7 text-sm text-gray-400">
+            <div className="relative mb-4">
+              <label htmlFor="email" className="leading-7 text-sm text-gray-400">
                 Tags
               </label>
               <input
@@ -90,11 +90,11 @@ function Form() {
                 id="title"
                 value={tags}
                 onChange={(e) => setTags(e.target.value)}
-                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
-            <div class="relative mb-4">
-              <label htmlFor="email" class="leading-7 text-sm text-gray-400">
+            <div className="relative mb-4">
+              <label htmlFor="email" className="leading-7 text-sm text-gray-400">
                 Language
               </label>
               <input
@@ -102,11 +102,11 @@ function Form() {
                 id="title"
                 value={language}
                 onChange={(e) => setLanguage(e.target.value)}
-                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
             <button
-              class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+              className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
               onClick={handleSubmit}
             >
               Button
