@@ -8,7 +8,6 @@ import Login from "../pages/Login";
 import NewSnippets from "../pages/NewSnippets";
 import Snippet from "../components/Snippet/Snippet";
 import UserSnippets from "../components/UserSnippets/UserSnippets";
-import PrivateRoute from "./PrivateRoute";
 
 function Routes() {
   const [user] = useAuthState(auth);

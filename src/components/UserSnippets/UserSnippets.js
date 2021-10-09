@@ -7,7 +7,7 @@ import Card from "../Card/Card";
 import { Link } from "react-router-dom";
 
 function UserSnippets() {
-  const [user, loading, error] = useAuthState(auth);
+  const [user, loading] = useAuthState(auth);
 
   const [data, setData] = useState([]);
   useEffect(() => {

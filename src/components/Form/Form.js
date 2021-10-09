@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import { auth } from "../../firebase";
-import { Link } from "react-router-dom";
 import BackButton from "../BackButton";
 
 function Form() {

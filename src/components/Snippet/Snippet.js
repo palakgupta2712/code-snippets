@@ -42,20 +42,20 @@ function Snippet() {
       {copied ? (
         <section>
           <div
-            class="items-center bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative"
+            className="items-center bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative"
             role="alert"
           >
-            <strong class="font-bold mr-5">Copied!</strong>
-            <p class="block sm:flex">{text}</p>
+            <strong className="font-bold mr-5">Copied!</strong>
+            <p className="block sm:flex">{text}</p>
             <span
-              class="absolute top-0 bottom-0 right-0 px-4 py-3"
+              className="absolute top-0 bottom-0 right-0 px-4 py-3"
               onClick={() => {
                 setText("");
                 setCopied(false);
               }}
             >
               <svg
-                class="fill-current h-6 w-6 text-red-500"
+                className="fill-current h-6 w-6 text-red-500"
                 role="button"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
@@ -75,16 +75,16 @@ function Snippet() {
               <h2 className="text-sm title-font text-gray-500 tracking-widest">
                 {data.createdOn}
               </h2>
-              <div class="flex">
+              <div className="flex">
                 <h1 className="text-white text-3xl title-font font-medium mb-4">
                   {data.title}
                 </h1>
                 <button className="hover:fill-current hover:text-red-600 rounded-full ml-auto w-10 h-10 bg-gray-800 p-0 border-0 inline-flex items-center justify-center text-gray-500">
                   <svg
                     fill="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     className="w-5 h-5"
                     viewBox="0 0 24 24"
                   >
@@ -148,8 +148,11 @@ function Snippet() {
               <div className="flex border-t border-gray-800 py-2">
                 <span className="text-gray-500">Tags</span>
                 <span className="ml-auto text-white">
-                  {tags.map((tag) => (
-                    <span className="inline-block py-1 px-2 ml-2 rounded bg-gray-800 text-gray-400 text-opacity-75 text-xs font-medium tracking-widest">
+                  {tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="inline-block py-1 px-2 ml-2 rounded bg-gray-800 text-gray-400 text-opacity-75 text-xs font-medium tracking-widest"
+                    >
                       {tag}
                     </span>
                   ))}
