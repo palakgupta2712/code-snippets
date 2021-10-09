@@ -1,8 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "./Button";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth, logout } from "../../firebase";
 
 function Header() {
+  const [user] = useAuthState(auth);
+
   return (
     <>
       <header class="text-gray-400 bg-gray-900 body-font">
@@ -14,7 +18,12 @@ function Header() {
             <span class="ml-3 text-xl">&#60; Code Snippets &#47;&#62;</span>
           </Link>
           <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <Button title="Sign In" path="/login" />
+            <p>{user?.displayName}</p>
+            {user ? (
+              <Button title="Sign Out" onClick={logout} path="/" />
+            ) : (
+              <Button title="Sign In" path="/login" />
+            )}{" "}
           </nav>
         </div>
       </header>
