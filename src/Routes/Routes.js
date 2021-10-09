@@ -1,13 +1,14 @@
 import React from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
-import Layout from "./layout/Layout";
+import Layout from "../layout/Layout";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "./firebase";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import NewSnippets from "./pages/NewSnippets";
-import Snippet from "./components/Snippet/Snippet";
-import UserSnippets from "./components/UserSnippets/UserSnippets";
+import { auth } from "../firebase";
+import Home from "../pages/Home";
+import Login from "../pages/Login";
+import NewSnippets from "../pages/NewSnippets";
+import Snippet from "../components/Snippet/Snippet";
+import UserSnippets from "../components/UserSnippets/UserSnippets";
+import PrivateRoute from "./PrivateRoute";
 
 function Routes() {
   const [user] = useAuthState(auth);
@@ -24,13 +25,13 @@ function Routes() {
               {user ? <Redirect to="/" /> : <Login />}
             </Route>
             <Route path="/new">
-              <NewSnippets />
+              {user ? <NewSnippets /> : <Redirect to="/login" />}
             </Route>
             <Route path="/snippet/:id">
               <Snippet />
             </Route>
             <Route path="/snippets">
-              <UserSnippets />
+              {user ? <UserSnippets /> : <Redirect to="/login" />}
             </Route>
           </Layout>
         </Switch>
