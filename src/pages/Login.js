@@ -1,6 +1,6 @@
 import React from "react";
-import SignInWithButton from "./SignInWithButton";
-import { signInWithGoogle } from "../../firebase";
+import SignInWithButton from "../components/Login/SignInWithButton";
+import { signInWithGoogle } from "../firebase";
 
 function Login() {
   return (
@@ -11,10 +11,9 @@ function Login() {
             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
               Sign into your account
             </h1>
-
-            <p class="text-sm mt-2 text-gray-500 mb-8 w-full">
+            {/* <p class="text-sm mt-2 text-gray-500 mb-8 w-full">
               Neutra shabby chic ramps, viral fixie.
-            </p>
+            </p> */}
             <div class="flex text-gray-300">
               <SignInWithButton title="Google" signInWith={signInWithGoogle} />
               <SignInWithButton title="Github" />

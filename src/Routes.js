@@ -1,10 +1,12 @@
 import React from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
-import Home from "./components/Home/Home";
-import Login from "./components/Login/Login";
 import Layout from "./layout/Layout";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./firebase";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import NewSnippets from "./pages/NewSnippets";
+import Snippet from "./components/Snippet/Snippet";
 
 function Routes() {
   const [user] = useAuthState(auth);
@@ -19,6 +21,12 @@ function Routes() {
             </Route>
             <Route path="/login">
               {user ? <Redirect to="/" /> : <Login />}
+            </Route>
+            <Route path="/new">
+              <NewSnippets />
+            </Route>
+            <Route path="/snippet/:id">
+              <Snippet />
             </Route>
           </Layout>
         </Switch>
