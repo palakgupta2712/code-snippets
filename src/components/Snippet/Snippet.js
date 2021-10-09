@@ -13,7 +13,7 @@ function Snippet() {
   const [copied, setCopied] = useState(false);
   const [text, setText] = useState("");
   const CopyToClipboard = (id) => navigator.clipboard.writeText(id);
-  const [user, loading, error] = useAuthState(auth);
+  const [user] = useAuthState(auth);
 
   useEffect(() => {
     getSnippetDetails();
