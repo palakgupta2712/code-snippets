@@ -29,7 +29,7 @@ function Header() {
             <Link to="/" className="mr-5 hover:text-white">
               Home
             </Link>
-            <Link to="/" className="mr-5 hover:text-white">
+            <Link to="/snippets" className="mr-5 hover:text-white">
               Snippets
             </Link>
             {user ? (
