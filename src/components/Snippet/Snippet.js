@@ -4,6 +4,7 @@ import { auth, db } from "../../firebase";
 import { Redirect, useParams } from "react-router";
 import Highlight from "react-highlight";
 import { useAuthState } from "react-firebase-hooks/auth";
+import BackButton from "../BackButton";
 
 function Snippet() {
   const { id } = useParams();
@@ -67,7 +68,8 @@ function Snippet() {
       ) : null}
 
       <section className="text-gray-400 bg-gray-900 body-font overflow-hidden">
-        <div className="container px-5 py-24 mx-auto">
+        <BackButton />
+        <div className="container px-5 py-10 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <div className="w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
               <h2 className="text-sm title-font text-gray-500 tracking-widest">

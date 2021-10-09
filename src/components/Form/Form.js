@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import { auth } from "../../firebase";
+import { Link } from "react-router-dom";
+import BackButton from "../BackButton";
 
 function Form() {
   const [title, setTitle] = useState("");
@@ -42,7 +44,8 @@ function Form() {
   return (
     <div>
       <section className="text-gray-400 bg-gray-900 body-font relative">
-        <div className="container px-5 py-24 mx-auto flex">
+        <BackButton />
+        <div className="container px-5 py-5 mx-auto flex">
           <div className="max-w-md mx-auto bg-gray-900 shadow-md rounded-lg flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10">
             <h2 className="text-white text-lg mb-1 font-medium title-font">
               Snippet Details
