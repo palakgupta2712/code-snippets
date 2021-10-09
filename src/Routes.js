@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Home from "./components/Home/Home";
+import Login from "./components/Login/Login";
 import Layout from "./layout/Layout";
 
 function Routes() {
@@ -8,8 +10,12 @@ function Routes() {
       <BrowserRouter>
         <Switch>
           <Layout>
-            <Route to="/"></Route>
-            <Route to="/login"></Route>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
           </Layout>
         </Switch>
       </BrowserRouter>

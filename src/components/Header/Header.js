@@ -14,7 +14,7 @@ function Header() {
             <span class="ml-3 text-xl">&#60; Code Snippets &#47;&#62;</span>
           </Link>
           <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <Button />
+            <Button title="Sign In" path="/login" />
           </nav>
         </div>
       </header>
