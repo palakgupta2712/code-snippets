@@ -50,7 +50,7 @@ function Snippet() {
                 <span class="text-gray-500">Tags</span>
                 <span class="ml-auto text-white">
                   {tags.map((tag) => (
-                    <span class="inline-block py-1 px-2 rounded bg-gray-800 text-gray-400 text-opacity-75 text-xs font-medium tracking-widest">
+                    <span class="inline-block py-1 px-2 ml-2 rounded bg-gray-800 text-gray-400 text-opacity-75 text-xs font-medium tracking-widest">
                       {tag}
                     </span>
                   ))}

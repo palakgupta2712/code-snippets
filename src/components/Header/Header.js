@@ -18,7 +18,20 @@ function Header() {
             <span class="ml-3 text-xl">&#60; Code Snippets &#47;&#62;</span>
           </Link>
           <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <p>{user?.displayName}</p>
+            <div class="ml-auto text-white flex justify-center items-center mr-5">
+              <img
+                alt={user?.displayName}
+                src={user?.photoURL}
+                class="w-8 h-8 mx-1 rounded-full flex-shrink-0 object-cover object-center"
+              />
+              {user?.displayName}
+            </div>
+            <Link to="/" class="mr-5 hover:text-white">
+              Home
+            </Link>
+            <Link to="/" class="mr-5 hover:text-white">
+              Snippets
+            </Link>
             {user ? (
               <Button title="Sign Out" onClick={logout} path="/" />
             ) : (
