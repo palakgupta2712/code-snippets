@@ -19,11 +19,14 @@ function Header() {
           </Link>
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
             <div className="ml-auto text-white flex justify-center items-center mr-5">
-              <img
-                alt={user?.displayName}
-                src={user?.photoURL}
-                className="w-8 h-8 mx-1 rounded-full flex-shrink-0 object-cover object-center"
-              />
+              {user && (
+                <img
+                  alt={user?.displayName}
+                  src={user?.photoURL}
+                  className="w-8 h-8 mx-1 rounded-full flex-shrink-0 object-cover object-center"
+                />
+              )}
+
               {user?.displayName}
             </div>
             <Link to="/" className="mr-5 hover:text-white">
