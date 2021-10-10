@@ -15,8 +15,12 @@ function Login() {
               Neutra shabby chic ramps, viral fixie.
             </p> */}
             <div className="flex text-gray-300">
-              <SignInWithButton title="Google" signInWith={signInWithGoogle} />
-              <SignInWithButton title="Github" />
+              <SignInWithButton
+                title="Google"
+                signInWith={signInWithGoogle}
+                imgPath="/assests/google.png"
+              />
+              <SignInWithButton title="Github" imgPath="/assests/github.png" />
             </div>
           </div>
         </div>
