@@ -1,6 +1,6 @@
 import React from "react";
 import SignInWithButton from "../components/Login/SignInWithButton";
-import { signInWithGoogle } from "../firebase";
+import { signInWithGithub, signInWithGoogle } from "../firebase";
 
 function Login() {
   return (
@@ -20,7 +20,11 @@ function Login() {
                 signInWith={signInWithGoogle}
                 imgPath="/assests/google.png"
               />
-              <SignInWithButton title="Github" imgPath="/assests/github.png" />
+              <SignInWithButton
+                title="Github"
+                signInWith={signInWithGithub}
+                imgPath="/assests/github.png"
+              />
             </div>
           </div>
         </div>
